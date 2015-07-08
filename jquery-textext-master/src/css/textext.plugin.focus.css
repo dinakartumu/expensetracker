@@ -1,0 +1,10 @@
+.text-core .text-wrap .text-focus {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.text-core .text-wrap .text-focus.text-show-focus {
+  display: block;
+}
