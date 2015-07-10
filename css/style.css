@@ -13,6 +13,8 @@ body{
 nav{
 	height:40px;
 	background-color: #ffffff;
+	-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
 }
 
 nav #logo{
@@ -243,6 +245,8 @@ nav #datemenu li input{
 	background-color: #ffffff;
 	font-size: 16px;
 	color: #000000;
+	-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
 }
 
 #datesmenu .test{
