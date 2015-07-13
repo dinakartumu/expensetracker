@@ -257,7 +257,7 @@ nav #datemenu li input{
 }
 
 #datesmenu .test span{
-	cursor: hand;
+	cursor: pointer;
 }
 
 /*style for input fields in gettingexpenses.php*/

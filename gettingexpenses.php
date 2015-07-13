@@ -87,23 +87,30 @@ if (strlen($expensetype)!=0) {
 //code for getting expenses for selected date
 else if($dateselected=="Today" || $dateselected=="" )
 {
-	echo "<input type='date' name='year_week' id='selecteddate' value='$today' class='wow fadeInUp'>";
+	$datetype=date;
+	$datetypevalue=$today;
 	// 		<button type='button' id='submit'>Click Me</button>";
 	$result = mysql_query("select * from expenses where userselecteddate='$today' order BY userselecteddate DESC");
 }
 else if ($dateselected=="Week") {
-	echo "<div><input type='week' id='selecteddate' value='$required' class='wow fadeInUp'>";
+	$datetype=week;
+	$datetypevalue=$required;
+	
 			// <button type='button' id='submit'>Click Me</button></div>";
 	$result = mysql_query("SELECT * FROM expenses WHERE userselecteddate >= '$startofweek' AND userselecteddate <= '$endoftheweek' order BY userselecteddate DESC");
 }
 
 else if ($dateselected=="Month"){
-	echo " <input type='month' id='selecteddate' value='$yearno-{$monthno}' class='wow fadeInUp'>";
+	$datetype=month;
+	$datetypevalue="$yearno-$monthno";
+	// echo " <input type='$datetype' id='selecteddate' value='$yearno-{$monthno}' class='wow fadeInUp'>";
   			// <button type='button' id='submit'>Click Me</button></div>";
 	$result = mysql_query("SELECT * from expenses where MONTH(userselecteddate)='$monthno' order BY userselecteddate DESC");
 }
 
+// for year
 else {
+	$datetype=yearno;
 	$result4 = mysql_query("SELECT DISTINCT YEAR(userselecteddate) as years from expenses");
 	$yearrows= mysql_num_rows($result4);
 	if($yearrows)
@@ -125,6 +132,11 @@ else {
 	
 		if($rows)
 		{	
+			// echo "$datetype";
+			if($datetype!='yearno')
+			{
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
+			}
 			while($row = mysql_fetch_array($result))
 				{ 	
 					// code for generaing time for animation delay
