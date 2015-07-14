@@ -179,6 +179,10 @@ else {
 				}
 		}	
 		else{
+			if($datetype!='yearno')
+			{
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
+			}
 			echo "<div class='expenses wow fadeInUp' data-wow-duration='0.4s'><div class='description'><h3>No Expense Added To This $dateselected </h3></div></div>";
 		}
 ?>

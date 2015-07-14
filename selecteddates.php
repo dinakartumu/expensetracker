@@ -13,18 +13,25 @@ $type=$_GET['inputType'];
 // echo $selectedweeks;
 // echo $type;
 if ($type=="date") {
-	echo "<input type='date' name='year_week' id='selecteddate' value='$selectedweeks'>";
+	$datetype=date;
+	$datetypevalue=$today;
+	// echo "<input type='date' name='year_week' id='selecteddate' value='$selectedweeks'>";
 	$result = mysql_query("select * from expenses where userselecteddate='$selectedweeks' order BY userselecteddate DESC");
 }
 else if ($type=="week") {
-	echo "<div><input type='week' id='selecteddate' value='$required'>";
+	$datetype=week;
+	$datetypevalue=$required;
+	// echo "<div><input type='week' id='selecteddate' value='$required'>";
 	$result = mysql_query("SELECT * FROM expenses WHERE userselecteddate >= '$startofweek' AND userselecteddate <= '$endoftheweek' order BY userselecteddate DESC");
 }
 else if ($type=="month") {
-	echo " <input type='month' id='selecteddate' value='$yearno-{$monthno}'>";
+	$datetype=month;
+	$datetypevalue="$yearno-$monthno";
+	// echo " <input type='month' id='selecteddate' value='$yearno-{$monthno}'>";
 	$result = mysql_query("select * from expenses where MONTH(userselecteddate)='$monthno' order BY userselecteddate DESC");
 }
 else{
+	$datetype=yearno;
 	$result4 = mysql_query("SELECT DISTINCT YEAR(userselecteddate) as years from expenses");
 	$yearrows= mysql_num_rows($result4);
 	if($yearrows)
@@ -46,6 +53,10 @@ else{
 	// echo "$rows";
 		if($rows)
 		{
+			if($datetype!='yearno')
+			{
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
+			}
 			
 			while($row = mysql_fetch_array($result))
 				{ 
@@ -89,6 +100,11 @@ else{
 		}
 
 		else{
+
+			if($datetype!='yearno')
+			{
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
+			}
 		echo "<div class='expenses wow fadeInUp' data-wow-duration='0.5s'><div class='description'><h3>No Expense Added To this $type </h3></div></div>";
 	}	
  ?>
