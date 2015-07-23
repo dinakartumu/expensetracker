@@ -101,12 +101,10 @@ nav #options li a{
 	padding-left: 15px;
 	padding-bottom: 5px;
 	color: #000000;
-
 }
 
 .money{
-	width: 10%;	
-	overflow: hidden;
+	width:10%;
 }
 
 .money h4{
@@ -114,12 +112,12 @@ nav #options li a{
 	color: #000000;
 }
 
-.expense_tags {
+/*.expense_tags {
 	list-style-type: none;
 	display: inline;
 	padding: 2px;
 }
-
+*/
 
 /*add button style*/
 
