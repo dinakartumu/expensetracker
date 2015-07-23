@@ -14,7 +14,7 @@ $type=$_GET['inputType'];
 // echo $type;
 if ($type=="date") {
 	$datetype=date;
-	$datetypevalue=$selectedweeks;
+	$datetypevalue=$today;
 	// echo "<input type='date' name='year_week' id='selecteddate' value='$selectedweeks'>";
 	$result = mysql_query("select * from expenses where userselecteddate='$selectedweeks' order BY userselecteddate DESC");
 }
@@ -103,9 +103,9 @@ else{
 
 			if($datetype!='yearno')
 			{
-				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp' data-wow-duration='0.4s'>";
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
 			}
-		echo "<div class='expenses wow fadeInUp' data-wow-duration='0.6s'><div class='description'><h3>No Expense Added To this $type </h3></div></div>";
+		echo "<div class='expenses wow fadeInUp' data-wow-duration='0.5s'><div class='description'><h3>No Expense Added To this $type </h3></div></div>";
 	}	
  ?>
  <script type="text/javascript">

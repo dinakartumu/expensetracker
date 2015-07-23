@@ -115,7 +115,7 @@ else {
 	$yearrows= mysql_num_rows($result4);
 	if($yearrows)
 	{	
-		echo "<select id='selecteddate' class='wow zoomIn' data-wow-duration='0.4s'>";
+		echo "<select id='selecteddate'>";
 		while($yearrow = mysql_fetch_array($result4))
 			{ 
 				$years=$yearrow['years'];
@@ -135,7 +135,7 @@ else {
 			// echo "$datetype";
 			if($datetype!='yearno')
 			{
-				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow zoomIn' data-wow-duration='0.4s'>";
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
 			}
 			while($row = mysql_fetch_array($result))
 				{ 	
@@ -181,9 +181,9 @@ else {
 		else{
 			if($datetype!='yearno')
 			{
-				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow zoomIn' data-wow-duration='0.4s'>";
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow fadeInUp'>";
 			}
-			echo "<div class='expenses wow fadeIn' data-wow-duration='0.4s' data-wow-delay='0.2s'><div class='description'><h3>No Expense Added To This $dateselected </h3></div></div>";
+			echo "<div class='expenses wow fadeInUp' data-wow-duration='0.4s'><div class='description'><h3>No Expense Added To This $dateselected </h3></div></div>";
 		}
 ?>
 <script type="text/javascript">
