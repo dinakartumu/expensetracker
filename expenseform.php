@@ -3,17 +3,17 @@
 $today = date("Y-m-d");
 $value=$_GET['buttonvalue'];
 echo "$value";
-echo"<div id='expense_entry' class='wow zoomIn' >
-		<select id='expense_type' class='wow zoomIn' data-wow-duration='0.4s' data-wow-delay='0.2s'> 
+echo"<div id='expense_entry' class='wow fadeInUp' >
+		<select id='expense_type' class='wow fadeInUp' data-wow-duration='0.4s' data-wow-delay='0.2s'> 
 						<option value='expense'>Expense</option>	
 						<option value='income'>Income</option>							
 		</select>
-		<input type='text' id='description' class='wow zoomIn' data-wow-delay='0.2s' data-wow-duration='0.4s' placeholder='Description'>
-		<textarea id='textarea' rows='1' class='wow zoomIn'   data-wow-delay='0.2s' data-wow-duration='0.4s' style='padding-top:7px;margin-left:35%'></textarea>
-		<input id='money' type='number' placeholder='$'' required class='wow zoomIn' placeholder='$' data-wow-delay='0.3s' data-wow-duration='0.4s'>
-		<input id='dateselected' type='date' value='$today' class='wow zoomIn' data-wow-delay='0.4s' data-wow-duration='0.4s'>
-		<button id='savebutton' type='submit' class='wow zoomIn'  data-wow-delay='.5s' data-wow-duration='0.4s'>Save</button>
-		<button id='cancelbutton' class='wow zoomIn'  data-wow-delay='.5s'>Cancel</button>
+		<input type='text' id='description' class='wow fadeInUp' data-wow-delay='0.2s' data-wow-duration='0.4s' placeholder='Description'>
+		<textarea id='textarea' rows='1' class='wow fadeInUp'   data-wow-delay='0.2s' data-wow-duration='0.4s' style='padding-top:7px;margin-left:35%'></textarea>
+		<input id='money' type='number' placeholder='$'' required class='wow fadeInUp' placeholder='$' data-wow-delay='0.3s' data-wow-duration='0.4s'>
+		<input id='dateselected' type='date' value='$today' class='wow fadeInUp' data-wow-delay='0.4s' data-wow-duration='0.4s'>
+		<button id='savebutton' type='submit' class='wow fadeInUp'  data-wow-delay='.5s' data-wow-duration='0.4s'>Save</button>
+		<button id='cancelbutton' class='wow fadeInUp'  data-wow-delay='.5s'>Cancel</button>
 	</div>";
 
 ?>
