@@ -35,10 +35,10 @@
 					</nav>
 				</div> -->
 				<div id='datesmenu' class="wow zoomIn">
-					<div class='test wow fadeInUp' id="target" value="Today" data-wow-delay='0'><span>Today</span></div>
-					<div class='test wow fadeInUp' id="target1" value="Week" data-wow-delay='0.3s'><span>Week</span></div>
-					<div class='test wow fadeInUp' id="target2" value="Month" data-wow-delay='0.4s'><span>Month</span></div>
-					<div class='test wow fadeInUp' id="target1" value="Year" data-wow-delay='0.5s'><span>Year</span></div>
+					<div class='test wow fadeInLeft' id="target" value="Today" data-wow-delay='0'><span>Today</span></div>
+					<div class='test wow fadeInLeft' id="target1" value="Week" data-wow-delay='0.2s'><span>Week</span></div>
+					<div class='test wow fadeInLeft' id="target2" value="Month" data-wow-delay='0.3s'><span>Month</span></div>
+					<div class='test wow fadeInLeft' id="target1" value="Year" data-wow-delay='0.4s'><span>Year</span></div>
 				</div>
 
 				

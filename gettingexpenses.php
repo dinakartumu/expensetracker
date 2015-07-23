@@ -175,8 +175,6 @@ else {
 					// echo "<p>".$expensetype."</p>";
 					echo "<h4 class='wow fadeInUp' data-wow-delay='0.$time'>".$expense."</h4>";
 					echo "</div>";
-					echo "<div>";
-					echo "</div>";
 					echo "</div>";
 				}
 		}	

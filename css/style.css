@@ -106,7 +106,7 @@ nav #options li a{
 
 .money{
 	width: 10%;	
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 .money h4{
@@ -118,11 +118,6 @@ nav #options li a{
 	list-style-type: none;
 	display: inline;
 	padding: 2px;
-}
-
-.tags{
-	width:100%;
-	display:inline;
 }
 
 
