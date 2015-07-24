@@ -151,18 +151,46 @@ else {
 					$onlyday= date('Y-m-d', strtotime("$datecreated"));
 					$expensetype=$row['expense_type'];
 					$userid=$row['userid'];
-					// this is div that shows the data from that we get from database
 
-					echo "<div class='expenses wow zoomIn' data-wow-duration='0.4s' data-wow-delay='0.$time' id='$expense_id'>";
-					echo "<div class='description'>";
-					echo "<h3 class='wow fadeInUp'>".$description."</h3>";
-					//code for getting tags of the each expense
 					$tagresult = mysql_query("select t.`tag_name` as tagnames  from expenses e, arttcle_tags a, tags t where e.`article_id`= a.`article_id` and a.`tag_id`= t.`tag_id` and e.`article_id`='$expense_id'");
 					$tagrows= mysql_num_rows($tagresult);
+					// this is div that shows the data from that we get from database
 
-						if($tagrows)
+					// echo "<div class='expenses wow zoomIn' data-wow-duration='0.4s' data-wow-delay='0.$time' id='$expense_id'>";
+					// echo "<div class='description'>";
+					// echo "<h3 class='wow fadeInUp'>".$description."</h3>";
+					// //code for getting tags of the each expense
+					// $tagresult = mysql_query("select t.`tag_name` as tagnames  from expenses e, arttcle_tags a, tags t where e.`article_id`= a.`article_id` and a.`tag_id`= t.`tag_id` and e.`article_id`='$expense_id'");
+					// $tagrows= mysql_num_rows($tagresult);
+
+					// 	// if($tagrows)
+					// 	// {		
+					// 	// 	echo "<ul class='tags_list'>";
+					// 	// 	while($tagrow = mysql_fetch_array($tagresult))
+					// 	// 		{ 
+					// 	// 			$tagnames=$tagrow['tagnames'];
+					// 	// 			echo "<li class='wow fadeInUp' data-wow-delay='0.4s'><a>".$tagnames."</a></li>";							
+					// 	// 		}
+					// 	// 	echo "</ul>";
+					// 	// }
+
+					// echo "<p class='wow fadeInUp' data-wow-delay='0.7s'>".$expense_id."</p>";
+					// echo "</div>";
+					// echo "<div class='money'>";
+					// // echo "<p>".$expensetype."</p>";
+					// echo "<h4 class='wow fadeInUp' data-wow-delay='0.$time'>".$expense."</h4>";
+					// echo "</div>";
+					// echo "</div>";
+		echo "<div class='maindiv wow zoomIn' data-wow-duration='0.3s' data-wow-delay='0.$time' id='$expense_id'>
+		<div class='expensess'>
+			<div class='notes wow fadeInUp'><h3>$description</h3></div>
+			<div class='money wow fadeInUp' data-wow-delay='0.$time'><h4>$expense</h4></div>
+			<div class='delete_img'><img src='images/delete_button.png' height='20px'></div>
+		</div>
+		<div class='tags'>";
+			if($tagrows)
 						{		
-							echo "<ul class='tags_list'>";
+							echo "<ul class='tags_list' data-wow-delay='0.4s'>";
 							while($tagrow = mysql_fetch_array($tagresult))
 								{ 
 									$tagnames=$tagrow['tagnames'];
@@ -170,32 +198,7 @@ else {
 								}
 							echo "</ul>";
 						}
-
-					echo "<p class='wow fadeInUp' data-wow-delay='0.7s'>".$expense_id."</p>";
-					echo "</div>";
-					echo "<div class='money'>";
-					// echo "<p>".$expensetype."</p>";
-					echo "<h4 class='wow fadeInUp' data-wow-delay='0.$time'>".$expense."</h4>";
-					echo "</div>";
-					echo "</div>";
-					echo "<div class='maindiv'>
-		<div class='expensess'>
-			<div class='notes'><h3>A low-cost, highly-durable and highly available storage service for data archiving, online backup and disaster recovery. Data is available instantly, not within hours or days</h3></div>
-			<div class='money'><h4>$1,20,000</h4></div>
-			<div class='delete_img'><img src='.\delete_button.png' height='20px'></div>
-		</div>
-		<div class='tags'>
-			<ul class='tags_list'>
-				<li><a href=''>Home</a></li>
-				<li><a href=''>Categories</a></li>
-				<li><a href=''>Home</a></li>
-				<li><a href=''>Categories</a></li>
-				<li><a href=''>Home</a></li>
-				<li><a href=''>Categories</a></li>
-				<li><a href=''>Home</a></li>
-				<li><a href=''>Categories</a></li>
-			</ul>
-		</div>
+		echo "</div>
 	</div>";
 				}
 		}	

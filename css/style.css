@@ -1,5 +1,5 @@
 *{
-	margin: 0;
+	margin:0;
 }
 
 body{
@@ -68,7 +68,6 @@ nav #options li a{
 	margin-right: auto;
 	width: 90%;
 	font-size: 14px;
-	color: #ffffff;
 }
 
 .expenses{
@@ -100,18 +99,21 @@ nav #options li a{
 	color: #000000;
 }
 
-.money{
+/*.money{
 	width: 10%;	
 	overflow: hidden;
-}
+}*/
 
-.money h4{
+/*.money h4{
 	padding: 25px;
 	color: #000000;
-}
+}*/
 
 .maindiv{
 	background-color: #ffffff;
+	margin-bottom: 1px;
+	margin-left:auto;
+	margin-right:auto;
 	margin-bottom: 1px;
     -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
     box-shadow: 0 2px 10px rgba(0,0,0,.2);
@@ -131,12 +133,14 @@ nav #options li a{
 	padding-left:14px;
 	padding-top:11px;
 	color: #616161;	
+	/*min-height:14px;*/
 }
 
 .maindiv .money{
 	right: 30px;
 	top:12px;
 	position: absolute;
+	color: #616161;	
 }
 
 .maindiv img{
@@ -175,8 +179,14 @@ nav #options li a{
 	opacity: 1;
 }
 
+.tags{
+	min-height:30px;
+	margin-right:10px;
+	margin-left:14px;
+}
+
 .tags_list{
- 	padding:10px 10px 10px 14px;
+ 	padding:10px 10px 10px 0px;
  	width: 100%;
  }
 
@@ -189,7 +199,8 @@ nav #options li a{
 	/* -webkit-box-shadow: 0 2px 1px rgba(0,0,0,.2);
     box-shadow: 0 2px 1px rgba(0,0,0,.2);*/
 	margin-top: 3px;
-	margin-left:10px;
+	margin-right:3px;
+	/*margin-left:10px;*/
 	font-size: 12px;
 }
 
