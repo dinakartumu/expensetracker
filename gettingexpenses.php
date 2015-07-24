@@ -155,18 +155,20 @@ else {
 
 					echo "<div class='expenses wow zoomIn' data-wow-duration='0.4s' data-wow-delay='0.$time' id='$expense_id'>";
 					echo "<div class='description'>";
-					echo "<h3 class='wow fadeInUp'>".$userid."</h3>";
+					echo "<h3 class='wow fadeInUp'>".$description."</h3>";
 					//code for getting tags of the each expense
 					$tagresult = mysql_query("select t.`tag_name` as tagnames  from expenses e, arttcle_tags a, tags t where e.`article_id`= a.`article_id` and a.`tag_id`= t.`tag_id` and e.`article_id`='$expense_id'");
 					$tagrows= mysql_num_rows($tagresult);
 
 						if($tagrows)
 						{		
+							echo "<ul class='tags_list'>";
 							while($tagrow = mysql_fetch_array($tagresult))
 								{ 
 									$tagnames=$tagrow['tagnames'];
-									echo "<p class='wow fadeInUp' data-wow-delay='0.4s'>".$tagnames."</p>";							
+									echo "<li class='wow fadeInUp' data-wow-delay='0.4s'><a>".$tagnames."</a></li>";							
 								}
+							echo "</ul>";
 						}
 
 					echo "<p class='wow fadeInUp' data-wow-delay='0.7s'>".$expense_id."</p>";
@@ -176,6 +178,25 @@ else {
 					echo "<h4 class='wow fadeInUp' data-wow-delay='0.$time'>".$expense."</h4>";
 					echo "</div>";
 					echo "</div>";
+					echo "<div class='maindiv'>
+		<div class='expensess'>
+			<div class='notes'><h3>A low-cost, highly-durable and highly available storage service for data archiving, online backup and disaster recovery. Data is available instantly, not within hours or days</h3></div>
+			<div class='money'><h4>$1,20,000</h4></div>
+			<div class='delete_img'><img src='.\delete_button.png' height='20px'></div>
+		</div>
+		<div class='tags'>
+			<ul class='tags_list'>
+				<li><a href=''>Home</a></li>
+				<li><a href=''>Categories</a></li>
+				<li><a href=''>Home</a></li>
+				<li><a href=''>Categories</a></li>
+				<li><a href=''>Home</a></li>
+				<li><a href=''>Categories</a></li>
+				<li><a href=''>Home</a></li>
+				<li><a href=''>Categories</a></li>
+			</ul>
+		</div>
+	</div>";
 				}
 		}	
 		else{
@@ -183,7 +204,7 @@ else {
 			{
 				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow zoomIn' data-wow-duration='0.4s'>";
 			}
-			echo "<div class='expenses wow fadeIn' data-wow-duration='0.4s' data-wow-delay='0.2s'><div class='description'><h3>No Expense Added To This $dateselected </h3></div></div>";
+			echo "<div class='expenses wow fadeIn' data-wow-duration='0.4s' data-wow-delay='0.2s'><div class='description'><h3>No Expense Added In This $dateselected </h3></div></div>";
 		}
 ?>
 <script type="text/javascript">
