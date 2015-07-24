@@ -79,9 +79,10 @@ if (strlen($expensetype)!=0) {
 					}
 			}					
 	}
-	echo "<input type='date' name='year_week' id='selecteddate' value='$today' class='wow fadeInUp'>";
+	$datetype=date;
+	$datetypevalue=$today;
 		// 		<button type='button' id='submit'>Click Me</button>";
-		$result = mysql_query("select * from expenses where userselecteddate='$today' order BY userselecteddate DESC");
+	$result = mysql_query("select * from expenses where userselecteddate='$today' order BY userselecteddate DESC");
 } // end of if condition
 
 //code for getting expenses for selected date
