@@ -70,45 +70,6 @@ nav #options li a{
 	font-size: 14px;
 }
 
-.expenses{
-	width: 100%;
-	background-color: #ffffff;
-	display: -webkit-flex;
-	margin-bottom: 1px;
-    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
-    box-shadow: 0 2px 10px rgba(0,0,0,.2);
-}
-
-.description{
-	width: 90%;	
-}
-
-.description h3{
-	padding-top: 12px;
-	padding-left: 12px;
-	padding-bottom: 12px;
-	color: #616161;
-	text-transform: uppercase;
-
-}
-
-.description p{
-	padding-top: 2px;
-	padding-left: 15px;
-	padding-bottom: 5px;
-	color: #000000;
-}
-
-/*.money{
-	width: 10%;	
-	overflow: hidden;
-}*/
-
-/*.money h4{
-	padding: 25px;
-	color: #000000;
-}*/
-
 .maindiv{
 	background-color: #ffffff;
 	margin-bottom: 1px;
@@ -222,6 +183,7 @@ nav #options li a{
 	position: fixed;
 	 -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
     box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	z-index: 1;
 }
 
 /*.button button:focus{
