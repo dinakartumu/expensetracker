@@ -23,17 +23,6 @@
 					
 				</div>
 				
-				<!-- div for showing type of dates -->
-				<!-- <div class='datemenu'>
-					<nav class="wow zoomIn" id="dates">
-						<ul id="datemenu" >
-							<li><input type="button" class="test" id="target" value="Today"></li>
-							<li><input type="button" class="test wow fadeInLeft" id="target1" value="Week" data-wow-delay='0.1s'></li>
-							<li><input type="button" class="test wow fadeInLeft" id="target2" value="Month" data-wow-delay='0.2s'></li>
-							<li><input type="button" class="test wow fadeInLeft" id="target3" value="Year" data-wow-delay='0.3s'></li>	
-						</ul>
-					</nav>
-				</div> -->
 				<div id='datesmenu' class="wow zoomIn">
 					<div class='test wow fadeInUp' id="target" value="Today" data-wow-delay='0'><span>Today</span></div>
 					<div class='test wow fadeInUp' id="target1" value="Week" data-wow-delay='0.2s'><span>Week</span></div>
