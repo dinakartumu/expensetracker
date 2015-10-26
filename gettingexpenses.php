@@ -136,7 +136,11 @@ else {
 			// echo "$datetype";
 			if($datetype!='yearno')
 			{
-				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow zoomIn' data-wow-duration='0.4s'>";
+				echo "<div class='expense_summary'>";
+				echo "<input type='$datetype' name='year_week' id='selecteddate' value='$datetypevalue' class='wow zoomIn selecteddate' data-wow-duration='0.4s'>";
+				echo "<input type='$datetype' name='year_week' id='selecteddate1' value='$datetypevalue' class='wow zoomIn selecteddate1' data-wow-duration='0.4s'>";
+				echo "<input type='$datetype' name='year_week' id='selecteddate2' value='$datetypevalue' class='wow zoomIn selecteddate2' data-wow-duration='0.4s'>";
+				echo "</div>";
 			}
 			while($row = mysql_fetch_array($result))
 				{ 	

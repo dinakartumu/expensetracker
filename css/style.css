@@ -186,11 +186,11 @@ nav #options li a{
 	z-index: 1;
 }
 
-/*.button button:focus{
+.button button:focus{
 	outline: none;
 	background-color: #000000;
 	color: #ffffff;
-}*/
+}
 
 .button button span{
 	top:-5px;
@@ -287,19 +287,31 @@ a{
 }
 
 /*style for input fields in gettingexpenses.php*/
+.expense_summary{
+	width: 100%;
+	background-color:#ffffff;
+	margin: 1px 0 1px 0;
+	 -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
 
 input{
-	/*width: 50%;*/
 	height: 30px;
-	margin: 5px 0;
 	font: 16px Helvetica;
 	border:none;
 	background-color: #ffffff;
 }
 
-#selecteddate{
-	-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
-    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+.selecteddate{
+	width: 20%;
+}
+
+.selecteddate1{
+	width: 35%;
+}
+
+.selecteddate2{
+	width: 35%;
 }
 
 input:focus{
